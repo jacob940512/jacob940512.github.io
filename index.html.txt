@@ -3,212 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>简历作品集 · 宏观多资产TAA策略</title>
+    <title>量化作品集 | 宏观增强多资产TAA策略 - CFA</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             background: #f2f6fc;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             padding: 32px 20px 60px;
             color: #112031;
+            line-height: 1.65;
         }
-
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             background: #ffffff;
             border-radius: 32px;
             box-shadow: 0 20px 60px rgba(0, 10, 30, 0.07);
-            padding: 40px 44px 36px;
+            padding: 48px 52px 40px;
         }
-
-        /* ----- 个人品牌条 ----- */
-        .profile-bar {
+        /* 头部个人信息栏 */
+        .profile-header {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 20px;
+            padding-bottom: 24px;
             border-bottom: 2px solid #e7eef7;
-            margin-bottom: 28px;
+            margin-bottom: 32px;
         }
-
-        .profile-left {
+        .profile-name-wrap {
             display: flex;
-            flex-wrap: wrap;
             align-items: baseline;
-            gap: 8px 22px;
+            gap: 10px;
         }
-
         .profile-name {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 600;
-            letter-spacing: -0.2px;
-            color: #0d2139;
+            color: #0a1e32;
+            letter-spacing: -0.3px;
         }
-
-        .profile-name .cfa {
+        .cfa-tag {
             font-size: 16px;
             font-weight: 500;
-            color: #2f557b;
-            background: #eaf1fa;
-            padding: 2px 14px;
-            border-radius: 30px;
-            margin-left: 6px;
+            color: #1b4a78;
+            background: #e2ecf9;
+            padding: 3px 16px;
+            border-radius: 99px;
         }
-
-        .profile-contact {
+        .contact-info {
             font-size: 15px;
             color: #2f5a84;
             display: flex;
             flex-wrap: wrap;
-            gap: 6px 20px;
+            gap: 18px;
         }
-
-        .profile-contact a {
-            color: #1b4d7a;
+        .contact-info a {
+            color: #0d3b66;
             text-decoration: none;
             border-bottom: 1px dotted #b2cce5;
         }
-
-        .profile-contact a:hover {
-            border-bottom: 2px solid #1b4d7a;
+        .contact-info a:hover {
+            border-bottom: 2px solid #0d3b66;
         }
-
-        /* ----- header ----- */
-        .header {
+        /* 项目标题区 */
+        .project-title-box {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: flex-end;
-            margin-bottom: 28px;
+            margin-bottom: 36px;
         }
-
-        .header h1 {
-            font-size: 30px;
+        .title-main h1 {
+            font-size: 32px;
             font-weight: 600;
-            letter-spacing: -0.2px;
             background: linear-gradient(135deg, #0a1e32, #2b5379);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 6px;
         }
-
-        .header .sub {
-            font-size: 17px;
-            font-weight: 400;
+        .title-sub {
+            font-size: 18px;
             color: #3a5e7e;
-            -webkit-text-fill-color: #3a5e7e;
         }
-
-        .badge {
-            background: #e2ecf9;
-            padding: 6px 20px;
-            border-radius: 40px;
+        .time-badge {
+            background: #1b4a78;
+            color: #fff;
+            padding: 8px 22px;
+            border-radius: 99px;
             font-size: 14px;
             font-weight: 500;
-            color: #1b4a78;
         }
-
-        /* ----- 数据卡片 ----- */
-        .grid-2 {
+        /* 核心业绩四格卡片 */
+        .core-data-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px 32px;
-            margin: 20px 0 8px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+            margin-bottom: 40px;
         }
-
-        .stat-card {
+        .data-card {
             background: #f7faff;
-            padding: 20px 22px;
-            border-radius: 20px;
-            border-left: 4px solid #2b6c9e;
+            padding: 24px 26px;
+            border-radius: 22px;
+            border-left: 5px solid #2b6c9e;
+            transition: 0.2s ease;
         }
-
-        .stat-card .label {
-            font-size: 13px;
+        .data-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(43, 108, 158, 0.12);
+        }
+        .card-label {
+            font-size: 14px;
             font-weight: 500;
             color: #4c6b89;
-            letter-spacing: 0.3px;
             text-transform: uppercase;
+            letter-spacing: 0.4px;
         }
-
-        .stat-card .value {
-            font-size: 30px;
-            font-weight: 600;
+        .card-value {
+            font-size: 34px;
+            font-weight: 700;
             color: #092035;
-            margin-top: 4px;
+            margin: 6px 0 10px;
         }
-
-        .stat-card .note {
+        .card-desc {
             font-size: 14px;
             color: #56708d;
-            margin-top: 8px;
-            padding-top: 10px;
             border-top: 1px dashed #d3e0ed;
+            padding-top: 10px;
         }
-
-        /* ----- 通用 ----- */
+        /* 通用区块标题 */
         .section-title {
-            font-size: 19px;
+            font-size: 20px;
             font-weight: 600;
-            margin: 36px 0 16px 0;
             color: #0f2a45;
+            margin: 42px 0 18px;
             display: flex;
             align-items: center;
             gap: 12px;
         }
-
-        .section-title span {
+        .section-tag {
             background: #dce6f2;
-            padding: 2px 16px;
-            border-radius: 40px;
-            font-size: 13px;
-            font-weight: 500;
             color: #15437a;
+            font-size: 13px;
+            padding: 3px 16px;
+            border-radius: 99px;
+            font-weight: 500;
         }
-
-        .pill-group {
+        /* 标签胶囊组 */
+        .pill-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px 14px;
-            margin: 6px 0 2px;
+            gap: 10px 16px;
+            margin: 10px 0 16px;
         }
-
         .pill {
             background: #edf3fa;
-            padding: 5px 18px;
-            border-radius: 40px;
-            font-size: 14px;
-            font-weight: 450;
             color: #1c4065;
+            padding: 6px 20px;
+            border-radius: 99px;
+            font-size: 14px;
         }
-
-        .highlight-box {
-            background: #f0f6fe;
-            padding: 20px 26px;
-            border-radius: 24px;
-            margin: 18px 0 6px;
-            border: 1px solid #dae5f2;
+        /* 双栏布局 */
+        .two-col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 24px 0;
         }
-
-        .highlight-box strong {
+        .col-block h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #0d2139;
+        }
+        .col-block ul {
+            list-style: none;
+        }
+        .col-block li {
+            font-size: 15px;
+            color: #1b3a5a;
+            padding: 5px 0;
+        }
+        .col-block li strong {
             color: #003d7a;
         }
-
-        .divider {
+        /* 高亮提示框（风控/技术栈） */
+        .highlight-panel {
+            background: #f0f6fe;
+            border: 1px solid #dae5f2;
+            border-radius: 24px;
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+        .highlight-panel h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #003d7a;
+        }
+        .divider-line {
             height: 1px;
             background: #e0e9f3;
-            margin: 30px 0;
+            margin: 40px 0;
         }
-
-        .footer-note {
-            margin-top: 32px;
-            padding-top: 20px;
+        /* 图表容器 */
+        .chart-wrap {
+            width: 100%;
+            margin: 20px 0 30px;
+            background: #f7faff;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .chart-wrap img {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+        }
+        .chart-caption {
+            font-size: 14px;
+            color: #4c6b89;
+            text-align: center;
+            margin-top: 10px;
+        }
+        /* 实战案例卡片 */
+        .case-card {
+            background: #f7faff;
+            border-radius: 20px;
+            padding: 22px 26px;
+            margin-bottom: 16px;
+        }
+        .case-time {
+            font-weight: 600;
+            color: #1b4a78;
+            margin-bottom: 6px;
+        }
+        /* 底部页脚 */
+        .footer-text {
+            margin-top: 40px;
+            padding-top: 24px;
             border-top: 1px solid #e7eef7;
             display: flex;
             flex-wrap: wrap;
@@ -216,161 +249,248 @@
             font-size: 14px;
             color: #4b6b89;
         }
-
+        /* 移动端适配 */
+        @media (max-width: 992px) {
+            .core-data-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
         @media (max-width: 700px) {
             .container {
-                padding: 24px 16px;
+                padding: 24px 18px;
             }
-            .grid-2 {
+            .core-data-grid, .two-col-grid {
                 grid-template-columns: 1fr;
-                gap: 16px;
             }
-            .profile-bar {
+            .profile-header, .project-title-box {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 10px;
+                gap: 14px;
             }
-            .header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
+            .card-value {
+                font-size: 28px;
             }
         }
     </style>
 </head>
 <body>
-
 <div class="container">
-
-    <!-- ========== 个人品牌 ========== -->
-    <div class="profile-bar">
-        <div class="profile-left">
-            <span class="profile-name">陆擎天 <span class="cfa">CFA</span></span>
+    <!-- 头部个人信息 -->
+    <div class="profile-header">
+        <div class="profile-name-wrap">
+            <span class="profile-name">陆擎天</span>
+            <span class="cfa-tag">CFA</span>
         </div>
-        <div class="profile-contact">
+        <div class="contact-info">
             <span>📧 <a href="mailto:jacoblu@aliyun.com">jacoblu@aliyun.com</a></span>
             <span>📱 <a href="tel:+8613554235017">135 5423 5017</a></span>
+            <span>💻 <a href="https://github.com/jacob940512" target="_blank">Github主页</a></span>
         </div>
     </div>
 
-    <!-- ========== 头部 ========== -->
-    <div class="header">
-        <div>
-            <h1>📊 宏观多资产 TAA 策略</h1>
-            <div class="sub">融合主观洞察 · 量化模型 · 全天候配置</div>
+    <!-- 项目标题 -->
+    <div class="project-title-box">
+        <div class="title-main">
+            <h1>宏观增强多资产TAA策略量化项目</h1>
+            <div class="title-sub">Black-Litterman + Mean-CVaR | 主观宏观+量化双驱动全天候配置</div>
         </div>
-        <div class="badge">回测 2021.11 – 2026.06</div>
+        <div class="time-badge">回测区间：2021.11 – 2026.06（56个月）</div>
     </div>
 
-    <!-- ========== 核心数据 ========== -->
-    <div class="grid-2">
-        <div class="stat-card">
-            <div class="label">📈 年化收益率</div>
-            <div class="value">15.52%</div>
-            <div class="note">宏观TAA策略 · 56个月实盘回测</div>
+    <!-- 核心业绩指标（面试官第一眼重点） -->
+    <div class="core-data-grid">
+        <div class="data-card">
+            <div class="card-label">年化收益率</div>
+            <div class="card-value">15.52%</div>
+            <div class="card-desc">宏观增强TAA全周期复利收益</div>
         </div>
-        <div class="stat-card">
-            <div class="label">📉 最大回撤</div>
-            <div class="value">-8.97%</div>
-            <div class="note">严格风控 · CVaR尾部约束</div>
+        <div class="data-card">
+            <div class="card-label">最大回撤</div>
+            <div class="card-value">-8.97%</div>
+            <div class="card-desc">CVaR尾部风险约束，回撤显著优于宽基</div>
         </div>
-        <div class="stat-card">
-            <div class="label">⚖️ 夏普比率</div>
-            <div class="value">1.34</div>
-            <div class="note">较纯TAA提升 0.29</div>
+        <div class="data-card">
+            <div class="card-label">夏普比率</div>
+            <div class="card-value">1.34</div>
+            <div class="card-desc">对比纯量化TAA提升0.29</div>
         </div>
-        <div class="stat-card">
-            <div class="label">📊 超额收益增厚</div>
-            <div class="value">+14.58%</div>
-            <div class="note">宏观择时 vs 标准TAA</div>
+        <div class="data-card">
+            <div class="card-label">超额增厚</div>
+            <div class="card-value">+14.58%</div>
+            <div class="card-desc">宏观择时相较标准TAA超额增量</div>
         </div>
     </div>
 
-    <!-- ========== 宏观周期 ========== -->
-    <div class="section-title">🔹 策略核心 <span>五阶段宏观周期</span></div>
-    <div class="pill-group">
-        <span class="pill">复苏</span>
-        <span class="pill">扩张早期</span>
-        <span class="pill">扩张晚期</span>
-        <span class="pill">放缓</span>
-        <span class="pill">收缩 / 通缩</span>
-    </div>
-    <div style="margin-top: 8px; color: #1e405f; font-size: 15px; line-height: 1.6;">
-        每月跟踪 PMI、CPI/PPI、非农、美联储政策、全球通胀预期，动态判定周期并调仓。
-    </div>
-
-    <!-- ========== 框架 & 归因 ========== -->
-    <div class="grid-2" style="margin-top: 26px;">
-        <div>
-            <div style="font-weight: 600; font-size: 17px; margin-bottom: 6px;">🧩 模型框架</div>
-            <ul style="list-style: none; padding-left: 0; line-height: 1.9; font-size: 15px; color: #1b3a5a;">
-                <li>✓ Black-Litterman 融合主观观点</li>
-                <li>✓ Singer-Terhaar 跨市场均衡定价</li>
-                <li>✓ Mean-CVaR 尾部风险优化</li>
-                <li>✓ 月度宏观冲击 → 周期判定 → 调仓</li>
+    <!-- 一、策略顶层框架 -->
+    <div class="section-title">🔎 策略三层架构 <span class="section-tag">整体逻辑</span></div>
+    <div class="two-col-grid">
+        <div class="col-block">
+            <h3>1. SAA长期战略基准</h3>
+            <ul>
+                <li>• Black-Litterman模型修正历史后视偏差</li>
+                <li>• 反向优化+Singer-Terhaar跨境收益校准</li>
+                <li>• Mean-CVaR替代传统方差，严控尾部黑天鹅风险</li>
+                <li>• 单资产权重5%-30%硬性约束</li>
             </ul>
         </div>
-        <div>
-            <div style="font-weight: 600; font-size: 17px; margin-bottom: 6px;">📌 Brinson 归因 (2021–2026)</div>
-            <ul style="list-style: none; padding-left: 0; line-height: 1.9; font-size: 15px; color: #1b3a5a;">
-                <li>✅ 配置效应：<strong>+20.29%</strong> (核心超额)</li>
-                <li>✅ 选择效应：-2.42% (标普500 Alpha显著)</li>
-                <li>✅ 交互效应：+3.24% (正向协同)</li>
-                <li>✅ 宏观TAA累计超额 <strong>21.44%</strong></li>
+        <div class="col-block">
+            <h3>2. 标准量化TAA（季度滚动调仓）</h3>
+            <ul>
+                <li>• 每季度更新上一期协方差、波动率、预期收益</li>
+                <li>• 仅依靠量化数据，无主观宏观判断</li>
+                <li>• 相对SAA权重偏离上限±30%</li>
+                <li>• 回测相对基准跑赢概率64.29%</li>
             </ul>
         </div>
     </div>
-
-    <!-- ========== 风控 ========== -->
-    <div class="highlight-box">
-        <strong>🛡️ 多维风控体系</strong><br>
-        长期：SAA尾部风险目标（CVaR上限）&nbsp;|&nbsp; 中期：TAA波动跟踪 &nbsp;|&nbsp; 短期：衍生品对冲（股指期货 / 期权组合）<br>
-        <span style="font-size: 14px; color: #24537a;">单一资产权重 30% &gt; w &gt; 5% · TAA偏离 ≤ ±30%</span>
-    </div>
-
-    <!-- ========== 资产覆盖 ========== -->
-    <div style="margin-top: 26px;">
-        <div style="font-weight: 600; font-size: 17px; margin-bottom: 8px;">🌐 资产覆盖</div>
-        <div class="pill-group">
-            <span class="pill">🇨🇳 中证500</span>
-            <span class="pill">🇺🇸 标普500</span>
-            <span class="pill">🇩🇪 DAX</span>
-            <span class="pill">🇫🇷 CAC</span>
-            <span class="pill">🇯🇵 日经225</span>
-            <span class="pill">🏦 国债/AA+高收益债</span>
-            <span class="pill">🥇 黄金</span>
-            <span class="pill">🏢 REITs</span>
-            <span class="pill">💵 货币基金</span>
+    <div class="highlight-panel">
+        <h3>3. 宏观增强TAA（项目核心创新点）</h3>
+        <p>按月跟踪PMI、CPI/PPI、美国非农、美联储货币政策，划分五阶段经济周期，月度动态调整大类权重；不改动底层ETF选股模型，仅优化资产配置权重，全部超额增量来自宏观周期预判。</p>
+        <div class="pill-row" style="margin-top:12px;">
+            <span class="pill">复苏</span>
+            <span class="pill">扩张早期</span>
+            <span class="pill">扩张晚期</span>
+            <span class="pill">经济放缓</span>
+            <span class="pill">收缩/通缩</span>
         </div>
     </div>
 
-    <!-- ========== 关键节点 ========== -->
-    <div class="divider"></div>
-    <div style="display: flex; flex-wrap: wrap; gap: 12px 30px; font-size: 14px; color: #1a3c5d;">
-        <div><span style="font-weight: 500;">📅 2022</span> 全球股债双杀 · 策略回撤控制显著</div>
-        <div><span style="font-weight: 500;">📅 2024.09</span> 精准加仓中证500 · 捕获复苏红利</div>
-        <div><span style="font-weight: 500;">📅 2026</span> 流动性危机下仍保持正超额</div>
+    <!-- 二、全球可投资资产池 -->
+    <div class="section-title">🌐 底层资产标的 <span class="section-tag">10类全球流动性ETF</span></div>
+    <div class="pill-row">
+        <span class="pill">中证500</span>
+        <span class="pill">300动量指数</span>
+        <span class="pill">S&P 500</span>
+        <span class="pill">DAX</span>
+        <span class="pill">CAC All Shares</span>
+        <span class="pill">Nikkei 225</span>
+        <span class="pill">国债指数</span>
+        <span class="pill">AA+高收益债</span>
+        <span class="pill">黄金</span>
+        <span class="pill">REITs_932047</span>
+        <span class="pill">货币基金</span>
+    </div>
+    <p style="font-size:15px;color:#2a4866;">覆盖国内/海外权益、利率/信用债、大宗商品、不动产、现金，跨资产低相关性实现天然风险分散，全部标的对应场内可交易ETF，策略可落地实盘。</p>
+
+    <div class="divider-line"></div>
+
+    <!-- 三、回测可视化图表（核心业绩展示） -->
+    <div class="section-title">📈 回测净值与超额走势 <span class="section-tag">业绩可视化</span></div>
+
+    <!-- 图1 累计超额对比曲线 -->
+    <div class="chart-wrap">
+        <img src="https://p-flow-sign.bytedance.net/tos-cn-i-ik7evvg4ik/2ccdee1d317a408087f586425083bedc.pptx~tplv-zjpuufberj-ori.image?rcl=202607212126482CD681C76CCBD1125CA5&rk3s=8e244e95&rrcfp=c7386a2c&x-orig-authkey=akik7evvg4ik&x-orig-expires=1784726809&x-orig-sign=iWjKUGeqSwGIZUmsNqN2XcOcrFA%3D#img1" alt="TAA vs宏观TAA累计超额收益对比">
+        <div class="chart-caption">标准TAA累计超额6.86%，宏观TAA达21.44%；2024年9月复苏窗口为收益分水岭，宏观策略持续占优</div>
     </div>
 
-    <!-- ========== 策略优势 ========== -->
-    <div style="background: #e9f1fa; border-radius: 20px; padding: 20px 26px; margin-top: 26px;">
-        <div style="font-weight: 600; font-size: 16px; margin-bottom: 8px;">✅ 策略优势</div>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px 26px; font-size: 14px; color: #123257;">
-            <span>🌍 多资产全天候</span>
-            <span>📌 任何时候可投资</span>
-            <span>📈 有效性/延续性强</span>
-            <span>🛡️ 严格回撤控制</span>
-            <span>⚖️ 容错率高</span>
+    <!-- 图2 年度收益柱状 -->
+    <div class="chart-wrap">
+        <img src="https://p-flow-sign.bytedance.net/tos-cn-i-ik7evvg4ik/2ccdee1d317a408087f586425083bedc.pptx~tplv-zjpuufberj-ori.image?rcl=202607212126482CD681C76CCBD1125CA5&rk3s=8e244e95&rrcfp=c7386a2c&x-orig-authkey=akik7evvg4ik&x-orig-expires=1784726809&x-orig-sign=iWjKUGeqSwGIZUmsNqN2XcOcrFA%3D#img3" alt="年度收益对比">
+        <div class="chart-caption">2022熊市、2024复苏、2025权益行情下宏观TAA收益全面领先标准量化TAA</div>
+    </div>
+
+    <!-- 四、Brinson三因子归因（求职核心分析能力） -->
+    <div class="section-title">📊 Brinson三因子收益归因 <span class="section-tag">超额来源拆解</span></div>
+    <div class="two-col-grid">
+        <div class="col-block">
+            <h3>全周期累计收益拆分</h3>
+            <ul>
+                <li>• 资产配置收益：标准TAA <strong>11.34%</strong> / 宏观TAA <strong>20.29%</strong></li>
+                <li>• 资产选择收益：两套策略统一 <strong>-2.42%</strong>（选股模型无改动）</li>
+                <li>• 交互效应：标准TAA -2.06% / 宏观TAA <strong>+3.24%</strong></li>
+                <li>• 核心结论：14.58%超额增量全部来自宏观周期权重择时</li>
+            </ul>
+        </div>
+        <div class="col-block">
+            <h3>分资产收益时序验证</h3>
+            <ul>
+                <li>• 配置收益：中证500是核心超额引擎（2024.09加仓贡献最大）</li>
+                <li>• 选择收益：两套曲线完全重合，选股逻辑一致，对比公允</li>
+                <li>• 海外标普500、日经具备稳定单品Alpha，国内股债选股偏弱</li>
+            </ul>
         </div>
     </div>
-
-    <!-- ========== 底部 ========== -->
-    <div class="footer-note">
-        <span>📁 简历作品集 · 宏观多资产TAA策略</span>
-        <span>基于 Black-Litterman + Mean-CVaR · 回测数据扣除交易成本</span>
+    <div class="chart-wrap">
+        <img src="https://p-flow-sign.bytedance.net/tos-cn-i-ik7evvg4ik/2ccdee1d317a408087f586425083bedc.pptx~tplv-zjpuufberj-ori.image?rcl=202607212126482CD681C76CCBD1125CA5&rk3s=8e244e95&rrcfp=c7386a2c&x-orig-authkey=akik7evvg4ik&x-orig-expires=1784726809&x-orig-sign=iWjKUGeqSwGIZUmsNqN2XcOcrFA%3D#img5" alt="累计超额成分对比柱状图">
+        <div class="chart-caption">Brinson归因柱状图：宏观策略大幅增厚资产配置端超额收益</div>
     </div>
 
+    <!-- 五、宏观周期实战调仓案例（落地能力证明） -->
+    <div class="section-title">📅 宏观周期实战调仓案例 <span class="section-tag">可复现决策链路</span></div>
+    <div class="case-card">
+        <div class="case-time">2023.02｜扩张晚期·通胀过热+美联储加息</div>
+        <p>宏观冲击：美国非农超预期，国内CPI 5.6%；判定经济过热，上调货币基金至20%，大幅降低海外权益仓位，全面防御。</p>
+    </div>
+    <div class="case-card">
+        <div class="case-time">2023.12｜收缩通缩周期</div>
+        <p>宏观冲击：PMI持续低于荣枯线，通缩预期升温；提升国债权重至7.5%，下调中证500、高收益债风险敞口。</p>
+    </div>
+    <div class="case-card">
+        <div class="case-time">2024.09｜经济弱复苏（策略关键拐点）</div>
+        <p>宏观冲击：PMI重回扩张区间；中证500权重由30%提升至40%，减配黄金、国债，完整捕捉权益复苏行情，超额收益大幅拉开。</p>
+    </div>
+
+    <!-- 六、全维度风控体系 -->
+    <div class="section-title">🛡️ 三层风控框架 <span class="section-tag">回撤控制体系</span></div>
+    <div class="highlight-panel">
+        <h3>事前-事中-事后全周期风险管控</h3>
+        <ul style="margin-top:10px;">
+            <li>✅ 长期事前：SAA基准设置95% CVaR尾部上限，资产权重硬约束5%-30%</li>
+            <li>✅ 中期战术：TAA季度滚动波动率监控，权重相对SAA偏离不超过±30%</li>
+            <li>✅ 短期极端：市场恐慌、资产相关性抬升时，期权/股指期货对冲组合Beta</li>
+            <li>✅ 回测成本：所有净值已扣除双边换手率、ETF管理费、交易佣金</li>
+        </ul>
+    </div>
+
+    <!-- 七、求职加分：项目技术实现栈（重点！面试官看硬技能） -->
+    <div class="section-title">💻 项目技术栈与量化能力 <span class="section-tag">求职核心竞争力</span></div>
+    <div class="two-col-grid">
+        <div class="col-block">
+            <h3>量化建模能力</h3>
+            <ul>
+                <li>• Python：Pandas/Numpy 滚动协方差、波动率矩阵计算</li>
+                <li>• Black-Litterman贝叶斯均衡收益模型完整复现</li>
+                <li>• Mean-CVaR凸优化求解最优资产权重</li>
+                <li>• Brinson-Hood-Beebower三因子归因完整代码实现</li>
+            </ul>
+        </div>
+        <div class="col-block">
+            <h3>数据&回测工具</h3>
+            <ul>
+                <li>• 多资产月度行情清洗、宏观指标（PMI/CPI/非农）拼接</li>
+                <li>• 滚动季度优化、月度宏观周期打分逻辑</li>
+                <li>• Matplotlib/Plotly 业绩可视化曲线绘制</li>
+                <li>• Excel 批量回测数据表、权重调仓测算</li>
+            </ul>
+        </div>
+    </div>
+    <div class="pill-row">
+        <span class="pill">Python</span>
+        <span class="pill">Black-Litterman</span>
+        <span class="pill">Mean-CVaR优化</span>
+        <span class="pill">Brinson归因</span>
+        <span class="pill">滚动协方差矩阵</span>
+        <span class="pill">宏观周期打分</span>
+        <span class="pill">多资产回测</span>
+    </div>
+
+    <!-- 八、项目核心优势总结 -->
+    <div class="section-title">✨ 项目核心亮点（面试口述素材）</div>
+    <div style="background:#e9f1fa;border-radius:20px;padding:24px 28px;">
+        <ul style="font-size:15px;color:#123257;gap:10px;display:flex;flex-wrap:wrap;row-gap:12px;flex-direction:column;">
+            <li>1. 创新融合量化BL模型与主观宏观五周期框架，兼容传统TAA体系，落地性强</li>
+            <li>2. 超额收益来源清晰可拆解，归因完整，每一期权重变动对应宏观事件，逻辑可解释</li>
+            <li>3. 严格尾部风险CVaR优化，最大回撤控制优于行业纯量化多资产策略</li>
+            <li>4. 覆盖全球10类主流可交易ETF，全天候适配复苏/过热/衰退各类宏观环境</li>
+            <li>5. 完整量化代码实现，从数据清洗、建模、优化、回测、归因全流程独立完成</li>
+        </ul>
+    </div>
+
+    <!-- 底部页脚 -->
+    <div class="footer-text">
+        <span>量化求职作品集 · 宏观增强多资产TAA策略项目</span>
+        <span>回测数据已扣除交易成本 | 完整代码托管Github</span>
+    </div>
 </div>
-
 </body>
 </html>
