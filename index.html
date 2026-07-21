@@ -12,20 +12,21 @@
         }
 
         body {
-            background: #0b1420;
-            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             padding: 32px 20px 60px;
-            color: #e8edf5;
+            color: #1a2634;
+            line-height: 1.6;
         }
 
         .container {
             max-width: 1120px;
             margin: 0 auto;
-            background: linear-gradient(165deg, #0f1a2a 0%, #1a2b40 100%);
-            border-radius: 28px;
+            background: #ffffff;
+            border-radius: 24px;
             padding: 44px 48px 36px;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: 0 8px 40px rgba(0, 20, 40, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.04);
         }
 
         /* ===== 顶部 ===== */
@@ -34,82 +35,80 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 18px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 16px;
+            border-bottom: 2px solid #f0f2f5;
             margin-bottom: 28px;
         }
 
         .profile-name {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 600;
-            letter-spacing: -0.2px;
-            color: #ffffff;
+            letter-spacing: -0.3px;
+            color: #0b1e30;
         }
 
         .profile-name .cfa {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
-            color: #d4af37;
-            background: rgba(212, 175, 55, 0.12);
+            color: #b8942a;
+            background: #f8f4eb;
             padding: 2px 14px;
             border-radius: 30px;
             margin-left: 6px;
-            border: 1px solid rgba(212, 175, 55, 0.15);
         }
 
         .profile-contact {
             font-size: 14px;
-            color: rgba(255, 255, 255, 0.5);
+            color: #6a7f9b;
             display: flex;
             flex-wrap: wrap;
             gap: 6px 22px;
         }
 
         .profile-contact a {
-            color: rgba(255, 255, 255, 0.5);
+            color: #6a7f9b;
             text-decoration: none;
-            border-bottom: 1px dotted rgba(255, 255, 255, 0.12);
+            border-bottom: 1px dotted #dce3ec;
             transition: color 0.2s;
         }
 
         .profile-contact a:hover {
-            color: #d4af37;
-            border-bottom-color: #d4af37;
+            color: #0b1e30;
+            border-bottom-color: #b8942a;
         }
 
         /* ===== 主标题 ===== */
         .hero {
-            margin-bottom: 30px;
+            margin-bottom: 28px;
         }
 
         .hero h1 {
-            font-size: 34px;
-            font-weight: 700;
+            font-size: 30px;
+            font-weight: 600;
             letter-spacing: -0.5px;
-            color: #ffffff;
+            color: #0b1e30;
         }
 
         .hero h1 span.gold {
-            color: #d4af37;
+            color: #b8942a;
         }
 
         .hero .sub {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 400;
-            color: rgba(255, 255, 255, 0.45);
-            margin-top: 4px;
+            color: #6a7f9b;
+            margin-top: 2px;
         }
 
         .hero .badge {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 4px 18px;
+            background: #f0f2f5;
+            padding: 3px 16px;
             border-radius: 40px;
             font-size: 12px;
             font-weight: 500;
-            color: rgba(255, 255, 255, 0.4);
-            margin-top: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: #5a6f8b;
+            margin-top: 8px;
         }
 
         /* ===== 数据卡片 ===== */
@@ -117,54 +116,83 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 14px;
-            margin: 20px 0 30px;
+            margin: 20px 0 24px;
         }
 
         .stat-card {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 18px 16px 14px;
+            background: #f8faff;
+            padding: 16px 16px 14px;
             border-radius: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            border: 1px solid #eef2f8;
             transition: border-color 0.2s;
         }
 
         .stat-card:hover {
-            border-color: rgba(212, 175, 55, 0.2);
+            border-color: #d4dce8;
         }
 
         .stat-card .label {
             font-size: 11px;
             font-weight: 600;
-            color: rgba(255, 255, 255, 0.3);
-            letter-spacing: 0.6px;
+            color: #8a9bb0;
+            letter-spacing: 0.4px;
             text-transform: uppercase;
         }
 
         .stat-card .value {
-            font-size: 30px;
-            font-weight: 700;
-            color: #ffffff;
+            font-size: 28px;
+            font-weight: 600;
+            color: #0b1e30;
             margin-top: 2px;
         }
 
         .stat-card .value .gold {
-            color: #d4af37;
+            color: #b8942a;
         }
 
         .stat-card .note {
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.25);
+            color: #8a9bb0;
             margin-top: 6px;
             padding-top: 6px;
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-top: 1px solid #eef2f8;
+        }
+
+        /* ===== 图片 ===== */
+        .img-wrapper {
+            margin: 14px 0 6px;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #fafcff;
+            border: 1px solid #eef2f8;
+        }
+
+        .img-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .img-caption {
+            font-size: 13px;
+            color: #6a7f9b;
+            padding: 10px 18px 14px;
+            background: #fafcff;
+            border-top: 1px solid #eef2f8;
+            text-align: center;
+        }
+
+        .img-caption strong {
+            color: #0b1e30;
+            font-weight: 500;
         }
 
         /* ===== 通用 ===== */
         .section-title {
             font-size: 18px;
             font-weight: 600;
-            margin: 34px 0 14px 0;
-            color: #ffffff;
+            margin: 34px 0 12px 0;
+            color: #0b1e30;
             display: flex;
             align-items: center;
             gap: 12px;
@@ -172,43 +200,49 @@
         }
 
         .section-title .tag {
-            background: rgba(255, 255, 255, 0.04);
+            background: #f0f2f5;
             padding: 2px 14px;
             border-radius: 40px;
             font-size: 11px;
             font-weight: 500;
-            color: rgba(255, 255, 255, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            color: #6a7f9b;
         }
 
         .section-title .gold-tag {
-            background: rgba(212, 175, 55, 0.1);
-            color: #d4af37;
+            background: #f8f4eb;
+            color: #b8942a;
             padding: 2px 14px;
             border-radius: 40px;
             font-size: 11px;
             font-weight: 500;
-            border: 1px solid rgba(212, 175, 55, 0.1);
         }
 
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 24px 36px;
-            margin: 12px 0 4px;
+            margin: 10px 0 4px;
         }
 
         .grid-2 ul {
             list-style: none;
             padding-left: 0;
-            line-height: 1.9;
             font-size: 14px;
-            color: rgba(255, 255, 255, 0.6);
+            color: #2a3f5a;
+        }
+
+        .grid-2 ul li {
+            padding: 4px 0;
+            border-bottom: 1px solid #f4f6fa;
+        }
+
+        .grid-2 ul li:last-child {
+            border-bottom: none;
         }
 
         .grid-2 ul li::before {
             content: "▸ ";
-            color: #d4af37;
+            color: #b8942a;
             font-weight: 600;
         }
 
@@ -220,95 +254,73 @@
         }
 
         .pill {
-            background: rgba(255, 255, 255, 0.04);
+            background: #f0f2f5;
             padding: 4px 16px;
             border-radius: 40px;
             font-size: 13px;
             font-weight: 450;
-            color: rgba(255, 255, 255, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            color: #3a5575;
         }
 
         .pill.gold {
-            background: rgba(212, 175, 55, 0.08);
-            color: #d4af37;
-            border-color: rgba(212, 175, 55, 0.08);
+            background: #f8f4eb;
+            color: #b8942a;
         }
 
         .pill.light {
-            background: rgba(255, 255, 255, 0.06);
-            color: rgba(255, 255, 255, 0.7);
-            border-color: rgba(255, 255, 255, 0.06);
-        }
-
-        .img-wrapper {
-            margin: 14px 0 6px;
-            border-radius: 14px;
-            overflow: hidden;
-            background: rgba(0, 0, 0, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-        }
-
-        .img-wrapper img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .img-caption {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.25);
-            padding: 8px 16px 12px;
-            background: rgba(0, 0, 0, 0.15);
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            background: #f4f6fa;
+            color: #5a6f8b;
         }
 
         .highlight-box {
-            background: rgba(255, 255, 255, 0.02);
+            background: #f8faff;
             padding: 18px 24px;
-            border-radius: 16px;
+            border-radius: 14px;
             margin: 14px 0 4px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            border: 1px solid #eef2f8;
         }
 
-        .highlight-box strong {
-            color: #ffffff;
+        .advantage-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 28px;
+            font-size: 14px;
+            color: #3a5575;
         }
 
-        .highlight-box .gold {
-            color: #d4af37;
+        .advantage-grid span::before {
+            content: "◆ ";
+            color: #b8942a;
+            font-size: 11px;
         }
 
         .divider {
             height: 1px;
-            background: rgba(255, 255, 255, 0.04);
+            background: #eef2f8;
             margin: 28px 0;
         }
 
         .footer-note {
             margin-top: 30px;
             padding-top: 18px;
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-top: 1px solid #f0f2f5;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.15);
+            color: #8a9bb0;
         }
 
-        .advantage-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 4px 24px;
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.5);
+        .context-text {
+            font-size: 14px;
+            color: #3a5575;
+            margin: 4px 0 8px;
+            line-height: 1.7;
         }
 
-        .advantage-grid span::before {
-            content: "◆ ";
-            color: #d4af37;
-            font-size: 10px;
+        .context-text strong {
+            color: #0b1e30;
+            font-weight: 500;
         }
 
         @media (max-width: 700px) {
@@ -329,7 +341,7 @@
                 gap: 10px;
             }
             .hero h1 {
-                font-size: 24px;
+                font-size: 22px;
             }
         }
     </style>
@@ -352,8 +364,8 @@
     <!-- ===== 主标题 ===== -->
     <div class="hero">
         <h1>宏观多资产 <span class="gold">TAA</span> 策略</h1>
-        <div class="sub">融合主观洞察 · 量化模型 · 全天候配置</div>
-        <div class="badge">回测 2021.11 – 2026.06 · 56个月</div>
+        <div class="sub">融合主观洞察与量化模型的全天候配置方案</div>
+        <div class="badge">回测周期 2021.11 – 2026.06 · 56个月</div>
     </div>
 
     <!-- ===== 核心指标 ===== -->
@@ -380,14 +392,27 @@
         </div>
     </div>
 
-    <!-- ===== 框架 ===== -->
+    <!-- ===== 净值曲线 ===== -->
+    <div class="section-title">净值走势 <span class="tag">宏观TAA vs 标准TAA</span></div>
+    <div class="context-text">
+        自2021年11月至今，宏观TAA策略累计净值达到 <strong>1.75</strong>，年化收益 <strong>12.56%</strong>，年化波动 <strong>9.89%</strong>，最大回撤控制在 <strong>10.3%</strong>。在全球股债双杀、流动性危机等多重压力下，策略展现了较强的抗跌性和回撤修复能力。
+    </div>
+    <div class="img-wrapper">
+        <img src="nav_curve.png" alt="宏观TAA回测净值曲线">
+        <div class="img-caption">2022年全球股债双杀阶段，策略回撤显著低于宽基指数；2024年9月后精准捕捉复苏行情，净值曲线斜率明显提升</div>
+    </div>
+
+    <!-- ===== 策略框架 ===== -->
     <div class="section-title">投资框架 <span class="gold-tag">Black-Litterman + Singer-Terhaar + Mean-CVaR</span></div>
+    <div class="context-text">
+        突破传统均值-方差模型对历史数据的过度依赖，通过融合市场均衡逻辑与前瞻性宏观观点，构建更适配未来市场环境的稳健配置基准。
+    </div>
     <div class="grid-2">
         <div>
             <ul>
                 <li>反向优化锚定全球均衡基准，反推隐含均衡收益</li>
                 <li>Singer-Terhaar 跨市场均衡定价，兼顾全球与本地风险</li>
-                <li>贝叶斯融合"市场基准"与"主观观点"概率合并</li>
+                <li>贝叶斯融合"市场基准"与"主观观点"</li>
                 <li>Mean-CVaR 尾部风险优化，严控极端损失</li>
             </ul>
         </div>
@@ -401,8 +426,11 @@
         </div>
     </div>
 
-    <!-- ===== 五阶段 ===== -->
+    <!-- ===== 五阶段周期 ===== -->
     <div class="section-title">宏观增强TAA <span class="gold-tag">五阶段经济周期</span></div>
+    <div class="context-text">
+        按月跟踪 <strong>PMI、CPI/PPI、非农数据、美联储政策、全球通胀预期</strong> 五大核心宏观信号，动态划分经济周期阶段并调整大类资产权重，有效修正纯量化模型的滞后性。
+    </div>
     <div class="pill-group">
         <span class="pill gold">复苏</span>
         <span class="pill light">扩张早期</span>
@@ -410,57 +438,75 @@
         <span class="pill light">放缓</span>
         <span class="pill light">收缩 / 通缩</span>
     </div>
-    <div style="margin-top: 6px; color: rgba(255,255,255,0.35); font-size: 14px; line-height: 1.7;">
-        每月跟踪 PMI、CPI/PPI、非农数据、美联储政策、全球通胀预期，动态划分周期并调整权重。
-    </div>
 
     <!-- ===== 年度收益 ===== -->
     <div class="section-title">年度收益对比 <span class="tag">标准TAA vs 宏观TAA</span></div>
+    <div class="context-text">
+        宏观TAA在各年度均跑赢标准TAA。2024年9·24政策转折后，宏观策略精准预判经济复苏，大幅加仓中证500，全年录得 <strong>29.88%</strong> 的年度收益，超额优势显著。
+    </div>
     <div class="img-wrapper">
         <img src="annualreturn_compare.png" alt="年度收益对比">
-        <div class="img-caption">宏观TAA在各年度均跑赢标准TAA，2024年超额尤为显著</div>
+        <div class="img-caption">2022年全球股债双杀环境中，宏观TAA将亏损从 -6.08% 收窄至 -2.62%，防御能力突出</div>
     </div>
 
     <!-- ===== 月度收益 ===== -->
     <div class="section-title">月度绝对收益 <span class="tag">2021.11 – 2026.06</span></div>
+    <div class="context-text">
+        从月度维度看，宏观TAA在市场下行阶段的回撤控制更优，上行阶段的弹性更强。2023年曲折复苏、2025年权益主导等不同市场环境中，策略均保持了稳定的正向超额。
+    </div>
     <div class="img-wrapper">
         <img src="return_compare.png" alt="月度收益对比">
-        <div class="img-caption">宏观TAA在市场下行阶段回撤控制更优，上行阶段弹性更强</div>
+        <div class="img-caption">91.07%的样本期间，宏观TAA曲线持续位于标准TAA上方</div>
     </div>
 
-    <!-- ===== Brinson ===== -->
+    <!-- ===== Brinson归因 ===== -->
     <div class="section-title">Brinson 归因分析 <span class="gold-tag">配置效应贡献 85%+ 超额</span></div>
+    <div class="context-text">
+        引入主观宏观研判后，<strong>资产配置效应</strong>贡献度实现翻倍增长，是策略收益增强的核心来源。资产选择效应稍弱，主要受日经指数相关ETF拖累，累积资产选择收益为 <strong>-2.88%</strong>。
+    </div>
     <div class="img-wrapper">
         <img src="brinson.png" alt="Brinson归因">
-        <div class="img-caption">资产配置效应翻倍增长，是策略收益增强的核心来源</div>
+        <div class="img-caption">配置收益从标准TAA的11.34%提升至宏观TAA的20.29%，提升8.94个百分点</div>
     </div>
 
     <!-- ===== 累计超额 ===== -->
     <div class="section-title">累计超额收益走势 <span class="gold-tag">宏观TAA累计超额 21.44%</span></div>
+    <div class="context-text">
+        自2021年11月初至2026年6月末，TAA累计超额 <strong>6.86%</strong>，宏观TAA达 <strong>21.44%</strong>，实现 <strong>14.58%</strong> 的绝对收益增厚。2024年9月是关键分水岭，宏观策略精准预判经济复苏，此后超额曲线斜率显著提升。
+    </div>
     <div class="img-wrapper">
         <img src="config_contribution.png" alt="累计超额走势">
-        <div class="img-caption">2024年9月精准预判复苏，超额曲线斜率显著提升</div>
+        <div class="img-caption">2024年9月加仓中证500的决策，直接拉动组合收益触及阶段峰值</div>
     </div>
 
     <!-- ===== 超额来源 ===== -->
     <div class="section-title">超额来源总拆分 <span class="tag">配置 / 选择 / 交互</span></div>
+    <div class="context-text">
+        两套策略的资产选择收益均为 <strong>-2.42%</strong>，收益差距并非源于标的选择，而是聚焦于配置能力的差异。宏观TAA的配置收益较标准TAA大幅提升 <strong>8.94个百分点</strong>，交互效应提升至 <strong>3.24%</strong>，说明宏观策略下的权重调整与资产涨跌节奏匹配度更高。
+    </div>
     <div class="img-wrapper">
         <img src="config_contribution2.png" alt="超额来源拆分">
-        <div class="img-caption">配置效应 20.29% vs 标准TAA 11.34%，贡献全部增量</div>
+        <div class="img-caption">资产配置是超额收益的绝对核心，贡献了超过85%的收益增量</div>
     </div>
 
     <!-- ===== 风险度量 ===== -->
     <div class="section-title">风险度量 &amp; TAA调仓 <span class="tag">VaR₉₅ / CVaR₉₅</span></div>
+    <div class="context-text">
+        严控组合月度尾部极端风险回撤在 <strong>-6%</strong> 以内，单一资产权重限制在 <strong>30% &gt; w &gt; 5%</strong>。中短期内追踪组合收益波动趋势，TAA权重偏离度控制在 <strong>±30%</strong> SAA基准权重以内。
+    </div>
     <div class="img-wrapper">
         <img src="risk_metrics.png" alt="风险度量">
-        <div class="img-caption">严控组合月度尾部极端风险回撤在 -6% 以内</div>
+        <div class="img-caption">中证500月度CVaR为 -14.83%，国债指数仅 -0.28%，资产间风险差异显著，分散化价值突出</div>
     </div>
 
     <!-- ===== 策略优势 ===== -->
     <div class="section-title">策略优势</div>
+    <div class="context-text">
+        立足全球宏观视角，利用不同经济体的周期错位与资产相关性进行跨境配置。不局限于单一市场的波动影响，在任何宏观环境下都能找到合适的投资标的。
+    </div>
     <div class="img-wrapper">
         <img src="strategy_summary.png" alt="策略优势">
-        <div class="img-caption">全天候 · 严格回撤 · 高容错率</div>
+        <div class="img-caption">通过构建低相关性资产组合，即便对某类资产判断失误，整体风险仍然可控</div>
     </div>
 
     <!-- ===== 底部优势文字 ===== -->
