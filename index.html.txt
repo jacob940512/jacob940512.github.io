@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>量化作品集 | 宏观增强多资产TAA策略 - CFA</title>
+    <title>宏观多资产TAA 量化策略作品集</title>
     <style>
         * {
             margin: 0;
@@ -189,7 +189,7 @@
         .col-block li strong {
             color: #003d7a;
         }
-        /* 高亮提示框（风控/技术栈） */
+        /* 高亮提示框 */
         .highlight-panel {
             background: #f0f6fe;
             border: 1px solid #dae5f2;
@@ -291,61 +291,61 @@
     <!-- 项目标题 -->
     <div class="project-title-box">
         <div class="title-main">
-            <h1>宏观增强多资产TAA策略量化项目</h1>
-            <div class="title-sub">Black-Litterman + Mean-CVaR | 主观宏观+量化双驱动全天候配置</div>
+            <h1>宏观多资产TAA策略量化项目</h1>
+            <div class="title-sub">Black-Litterman + Mean-CVaR | 宏观因子驱动战术配置模型</div>
         </div>
         <div class="time-badge">回测区间：2021.11 – 2026.06（56个月）</div>
     </div>
 
-    <!-- 核心业绩指标（面试官第一眼重点） -->
+    <!-- 核心业绩指标 -->
     <div class="core-data-grid">
         <div class="data-card">
             <div class="card-label">年化收益率</div>
             <div class="card-value">15.52%</div>
-            <div class="card-desc">宏观增强TAA全周期复利收益</div>
+            <div class="card-desc">宏观多资产TAA全周期复利收益</div>
         </div>
         <div class="data-card">
             <div class="card-label">最大回撤</div>
             <div class="card-value">-8.97%</div>
-            <div class="card-desc">CVaR尾部风险约束，回撤显著优于宽基</div>
+            <div class="card-desc">CVaR尾部风险约束，回撤控制优于宽基指数</div>
         </div>
         <div class="data-card">
             <div class="card-label">夏普比率</div>
             <div class="card-value">1.34</div>
-            <div class="card-desc">对比纯量化TAA提升0.29</div>
+            <div class="card-desc">相较标准季度TAA提升0.29</div>
         </div>
         <div class="data-card">
-            <div class="card-label">超额增厚</div>
+            <div class="card-label">相对标准TAA超额增厚</div>
             <div class="card-value">+14.58%</div>
-            <div class="card-desc">宏观择时相较标准TAA超额增量</div>
+            <div class="card-desc">宏观周期权重调整带来长期收益增量</div>
         </div>
     </div>
 
-    <!-- 一、策略顶层框架 -->
-    <div class="section-title">🔎 策略三层架构 <span class="section-tag">整体逻辑</span></div>
+    <!-- 一、策略三层架构 -->
+    <div class="section-title">🔎 策略三层架构 <span class="section-tag">整体逻辑框架</span></div>
     <div class="two-col-grid">
         <div class="col-block">
             <h3>1. SAA长期战略基准</h3>
             <ul>
-                <li>• Black-Litterman模型修正历史后视偏差</li>
-                <li>• 反向优化+Singer-Terhaar跨境收益校准</li>
-                <li>• Mean-CVaR替代传统方差，严控尾部黑天鹅风险</li>
-                <li>• 单资产权重5%-30%硬性约束</li>
+                <li>• Black-Litterman模型修正纯历史后视偏差</li>
+                <li>• 反向优化+Singer-Terhaar跨境风险溢价校准</li>
+                <li>• Mean-CVaR替代传统方差，约束尾部极端风险</li>
+                <li>• 单资产权重硬性区间：5% ~ 30%</li>
             </ul>
         </div>
         <div class="col-block">
-            <h3>2. 标准量化TAA（季度滚动调仓）</h3>
+            <h3>2. 季度标准TAA模型</h3>
             <ul>
-                <li>• 每季度更新上一期协方差、波动率、预期收益</li>
-                <li>• 仅依靠量化数据，无主观宏观判断</li>
-                <li>• 相对SAA权重偏离上限±30%</li>
-                <li>• 回测相对基准跑赢概率64.29%</li>
+                <li>• 每季度滚动更新收益、波动率、协方差矩阵</li>
+                <li>• 仅依托量化历史数据，无主观宏观打分</li>
+                <li>• TAA权重相对SAA偏离上限±30%</li>
+                <li>• 回测相对SAA基准跑赢概率64.29%</li>
             </ul>
         </div>
     </div>
     <div class="highlight-panel">
-        <h3>3. 宏观增强TAA（项目核心创新点）</h3>
-        <p>按月跟踪PMI、CPI/PPI、美国非农、美联储货币政策，划分五阶段经济周期，月度动态调整大类权重；不改动底层ETF选股模型，仅优化资产配置权重，全部超额增量来自宏观周期预判。</p>
+        <h3>3. 宏观月度TAA调整机制</h3>
+        <p>按月跟踪PMI、CPI/PPI、美国非农、美联储货币政策，划分五阶段经济周期动态调整大类资产权重；底层ETF筛选逻辑保持不变，全部超额增量来源于周期导向的资产配置调整。</p>
         <div class="pill-row" style="margin-top:12px;">
             <span class="pill">复苏</span>
             <span class="pill">扩张早期</span>
@@ -355,8 +355,8 @@
         </div>
     </div>
 
-    <!-- 二、全球可投资资产池 -->
-    <div class="section-title">🌐 底层资产标的 <span class="section-tag">10类全球流动性ETF</span></div>
+    <!-- 二、底层资产池 -->
+    <div class="section-title">🌐 底层可投资资产池 <span class="section-tag">10类全球流动性标的</span></div>
     <div class="pill-row">
         <span class="pill">中证500</span>
         <span class="pill">300动量指数</span>
@@ -370,126 +370,124 @@
         <span class="pill">REITs_932047</span>
         <span class="pill">货币基金</span>
     </div>
-    <p style="font-size:15px;color:#2a4866;">覆盖国内/海外权益、利率/信用债、大宗商品、不动产、现金，跨资产低相关性实现天然风险分散，全部标的对应场内可交易ETF，策略可落地实盘。</p>
+    <p style="font-size:15px;color:#2a4866;">覆盖境内外权益、利率与信用债、大宗商品、不动产、现金类资产，跨类别低相关性实现天然分散，全部标的对应场内可交易ETF，策略具备实盘落地条件。</p>
 
     <div class="divider-line"></div>
 
-    <!-- 三、回测可视化图表（核心业绩展示） -->
-    <div class="section-title">📈 回测净值与超额走势 <span class="section-tag">业绩可视化</span></div>
+    <!-- 三、回测业绩可视化 -->
+    <div class="section-title">📈 回测净值与超额走势 <span class="section-tag">业绩可视化图表</span></div>
 
-    <!-- 图1 累计超额对比曲线 -->
     <div class="chart-wrap">
-        <img src="https://p-flow-sign.bytedance.net/tos-cn-i-ik7evvg4ik/2ccdee1d317a408087f586425083bedc.pptx~tplv-zjpuufberj-ori.image?rcl=202607212126482CD681C76CCBD1125CA5&rk3s=8e244e95&rrcfp=c7386a2c&x-orig-authkey=akik7evvg4ik&x-orig-expires=1784726809&x-orig-sign=iWjKUGeqSwGIZUmsNqN2XcOcrFA%3D#img1" alt="TAA vs宏观TAA累计超额收益对比">
-        <div class="chart-caption">标准TAA累计超额6.86%，宏观TAA达21.44%；2024年9月复苏窗口为收益分水岭，宏观策略持续占优</div>
+        <img src="https://p-flow-sign.bytedance.net/tos-cn-i-ik7evvg4ik/2ccdee1d317a408087f586425083bedc.pptx~tplv-zjpuufberj-ori.image?rcl=202607212126482CD681C76CCBD1125CA5&rk3s=8e244e95&rrcfp=c7386a2c&x-orig-authkey=akik7evvg4ik&x-orig-expires=1784726809&x-orig-sign=iWjKUGeqSwGIZUmsNqN2XcOcrFA%3D#img1" alt="标准TAA与宏观TAA累计超额对比曲线">
+        <div class="chart-caption">标准季度TAA累计超额6.86%，宏观TAA累计超额21.44%；2024年9月为周期拐点，两类策略收益持续拉开差距</div>
     </div>
 
-    <!-- 图2 年度收益柱状 -->
     <div class="chart-wrap">
-        <img src="https://p-flow-sign.bytedance.net/tos-cn-i-ik7evvg4ik/2ccdee1d317a408087f586425083bedc.pptx~tplv-zjpuufberj-ori.image?rcl=202607212126482CD681C76CCBD1125CA5&rk3s=8e244e95&rrcfp=c7386a2c&x-orig-authkey=akik7evvg4ik&x-orig-expires=1784726809&x-orig-sign=iWjKUGeqSwGIZUmsNqN2XcOcrFA%3D#img3" alt="年度收益对比">
-        <div class="chart-caption">2022熊市、2024复苏、2025权益行情下宏观TAA收益全面领先标准量化TAA</div>
+        <img src="https://p-flow-sign.bytedance.net/tos-cn-i-ik7evvg4ik/2ccdee1d317a408087f586425083bedc.pptx~tplv-zjpuufberj-ori.image?rcl=202607212126482CD681C76CCBD1125CA5&rk3s=8e244e95&rrcfp=c7386a2c&x-orig-authkey=akik7evvg4ik&x-orig-expires=1784726809&x-orig-sign=iWjKUGeqSwGIZUmsNqN2XcOcrFA%3D#img3" alt="年度复利收益对比柱状图">
+        <div class="chart-caption">2022熊市、2024复苏、2025权益行情区间，宏观TAA年度收益均高于标准季度TAA</div>
     </div>
 
-    <!-- 四、Brinson三因子归因（求职核心分析能力） -->
-    <div class="section-title">📊 Brinson三因子收益归因 <span class="section-tag">超额来源拆解</span></div>
+    <!-- 四、Brinson收益归因拆解 -->
+    <div class="section-title">📊 Brinson三因子收益归因 <span class="section-tag">超额来源定量拆解</span></div>
     <div class="two-col-grid">
         <div class="col-block">
             <h3>全周期累计收益拆分</h3>
             <ul>
-                <li>• 资产配置收益：标准TAA <strong>11.34%</strong> / 宏观TAA <strong>20.29%</strong></li>
-                <li>• 资产选择收益：两套策略统一 <strong>-2.42%</strong>（选股模型无改动）</li>
-                <li>• 交互效应：标准TAA -2.06% / 宏观TAA <strong>+3.24%</strong></li>
-                <li>• 核心结论：14.58%超额增量全部来自宏观周期权重择时</li>
+                <li>• 资产配置收益：标准TAA 11.34% / 宏观TAA 20.29%</li>
+                <li>• 资产选择收益：两套模型完全统一 -2.42%</li>
+                <li>• 交互效应：标准TAA -2.06% / 宏观TAA +3.24%</li>
+                <li>• 14.58%收益增量全部来源于宏观周期驱动的配置调整</li>
             </ul>
         </div>
         <div class="col-block">
-            <h3>分资产收益时序验证</h3>
+            <h3>分资产时序归因结论</h3>
             <ul>
-                <li>• 配置收益：中证500是核心超额引擎（2024.09加仓贡献最大）</li>
-                <li>• 选择收益：两套曲线完全重合，选股逻辑一致，对比公允</li>
-                <li>• 海外标普500、日经具备稳定单品Alpha，国内股债选股偏弱</li>
+                <li>• 中证500为配置收益核心贡献资产，2024年9月调仓贡献显著正向收益</li>
+                <li>• 两套模型资产选择时序曲线完全重合，底层选股逻辑无改动</li>
+                <li>• 海外股指具备稳定单品Alpha，境内股债ETF选择收益偏弱</li>
             </ul>
         </div>
     </div>
     <div class="chart-wrap">
-        <img src="https://p-flow-sign.bytedance.net/tos-cn-i-ik7evvg4ik/2ccdee1d317a408087f586425083bedc.pptx~tplv-zjpuufberj-ori.image?rcl=202607212126482CD681C76CCBD1125CA5&rk3s=8e244e95&rrcfp=c7386a2c&x-orig-authkey=akik7evvg4ik&x-orig-expires=1784726809&x-orig-sign=iWjKUGeqSwGIZUmsNqN2XcOcrFA%3D#img5" alt="累计超额成分对比柱状图">
-        <div class="chart-caption">Brinson归因柱状图：宏观策略大幅增厚资产配置端超额收益</div>
+        <img src="https://p-flow-sign.bytedance.net/tos-cn-i-ik7evvg4ik/2ccdee1d317a408087f586425083bedc.pptx~tplv-zjpuufberj-ori.image?rcl=202607212126482CD681C76CCBD1125CA5&rk3s=8e244e95&rrcfp=c7386a2c&x-orig-authkey=akik7evvg4ik&x-orig-expires=1784726809&x-orig-sign=iWjKUGeqSwGIZUmsNqN2XcOcrFA%3D#img5" alt="Brinson三因子贡献柱状对比">
+        <div class="chart-caption">累计超额成分对比，资产配置是两类策略收益差距核心来源</div>
     </div>
 
-    <!-- 五、宏观周期实战调仓案例（落地能力证明） -->
-    <div class="section-title">📅 宏观周期实战调仓案例 <span class="section-tag">可复现决策链路</span></div>
+    <!-- 五、宏观周期调仓实例 -->
+    <div class="section-title">📅 宏观周期调仓实战案例 <span class="section-tag">可复现调仓决策</span></div>
     <div class="case-card">
-        <div class="case-time">2023.02｜扩张晚期·通胀过热+美联储加息</div>
-        <p>宏观冲击：美国非农超预期，国内CPI 5.6%；判定经济过热，上调货币基金至20%，大幅降低海外权益仓位，全面防御。</p>
+        <div class="case-time">2023.02｜扩张晚期：通胀过热+海外加息周期</div>
+        <p>宏观信号：美国非农数据超预期，国内CPI冲高至5.6%，内外流动性收紧预期升温；判定处于扩张晚期，上调货币基金权重至20%，下调海外权益仓位，整体转向防御配置。</p>
     </div>
     <div class="case-card">
         <div class="case-time">2023.12｜收缩通缩周期</div>
-        <p>宏观冲击：PMI持续低于荣枯线，通缩预期升温；提升国债权重至7.5%，下调中证500、高收益债风险敞口。</p>
+        <p>宏观信号：制造业PMI持续低于荣枯线，PPI同比走弱，通缩预期强化；提升国债权重至7.5%，降低中证500、高收益债风险敞口。</p>
     </div>
     <div class="case-card">
-        <div class="case-time">2024.09｜经济弱复苏（策略关键拐点）</div>
-        <p>宏观冲击：PMI重回扩张区间；中证500权重由30%提升至40%，减配黄金、国债，完整捕捉权益复苏行情，超额收益大幅拉开。</p>
+        <div class="case-time">2024.09｜经济弱复苏周期</div>
+        <p>宏观信号：PMI重回扩张区间，内需修复信号确认；中证500权重提升至40%，削减黄金、国债仓位，增配顺周期权益资产。</p>
     </div>
 
-    <!-- 六、全维度风控体系 -->
-    <div class="section-title">🛡️ 三层风控框架 <span class="section-tag">回撤控制体系</span></div>
+    <!-- 六、全维度风控框架 -->
+    <div class="section-title">🛡️ 三层风险管控体系 <span class="section-tag">事前-事中-事后全约束</span></div>
     <div class="highlight-panel">
-        <h3>事前-事中-事后全周期风险管控</h3>
+        <h3>长期、中期、短期分层风控规则</h3>
         <ul style="margin-top:10px;">
-            <li>✅ 长期事前：SAA基准设置95% CVaR尾部上限，资产权重硬约束5%-30%</li>
-            <li>✅ 中期战术：TAA季度滚动波动率监控，权重相对SAA偏离不超过±30%</li>
-            <li>✅ 短期极端：市场恐慌、资产相关性抬升时，期权/股指期货对冲组合Beta</li>
-            <li>✅ 回测成本：所有净值已扣除双边换手率、ETF管理费、交易佣金</li>
+            <li>✅ 长期SAA基准：设置95% CVaR尾部风险上限，单资产权重5%-30%硬性约束</li>
+            <li>✅ 中期季度TAA：滚动跟踪组合波动率，TAA相对SAA权重偏离不超过±30%</li>
+            <li>✅ 短期极端对冲：市场恐慌阶段利用股指期货、期权对冲组合Beta敞口</li>
+            <li>✅ 回测净值全部扣除双边换手成本、ETF管理费、交易佣金</li>
         </ul>
     </div>
 
-    <!-- 七、求职加分：项目技术实现栈（重点！面试官看硬技能） -->
-    <div class="section-title">💻 项目技术栈与量化能力 <span class="section-tag">求职核心竞争力</span></div>
+    <!-- 七、项目技术实现模块 -->
+    <div class="section-title">💻 项目技术实现栈 <span class="section-tag">量化建模工具</span></div>
     <div class="two-col-grid">
         <div class="col-block">
-            <h3>量化建模能力</h3>
+            <h3>量化建模模块</h3>
             <ul>
-                <li>• Python：Pandas/Numpy 滚动协方差、波动率矩阵计算</li>
-                <li>• Black-Litterman贝叶斯均衡收益模型完整复现</li>
+                <li>• Python Pandas/Numpy：滚动协方差、波动率矩阵批量计算</li>
+                <li>• 完整Black-Litterman贝叶斯均衡收益复现</li>
                 <li>• Mean-CVaR凸优化求解最优资产权重</li>
-                <li>• Brinson-Hood-Beebower三因子归因完整代码实现</li>
+                <li>• Brinson-Hood-Beebower三因子归因完整实现</li>
             </ul>
         </div>
         <div class="col-block">
-            <h3>数据&回测工具</h3>
+            <h3>数据与可视化工具</h3>
             <ul>
-                <li>• 多资产月度行情清洗、宏观指标（PMI/CPI/非农）拼接</li>
-                <li>• 滚动季度优化、月度宏观周期打分逻辑</li>
-                <li>• Matplotlib/Plotly 业绩可视化曲线绘制</li>
-                <li>• Excel 批量回测数据表、权重调仓测算</li>
+                <li>• 多资产行情、宏观指标（PMI/CPI/非农）数据清洗拼接</li>
+                <li>• 季度滚动优化、月度宏观周期打分量化逻辑</li>
+                <li>• Matplotlib绘制净值、超额、分资产时序图表</li>
+                <li>• Excel批量权重测算、回测数据表输出</li>
             </ul>
         </div>
     </div>
     <div class="pill-row">
         <span class="pill">Python</span>
         <span class="pill">Black-Litterman</span>
-        <span class="pill">Mean-CVaR优化</span>
-        <span class="pill">Brinson归因</span>
+        <span class="pill">Mean-CVaR凸优化</span>
+        <span class="pill">Brinson收益归因</span>
         <span class="pill">滚动协方差矩阵</span>
-        <span class="pill">宏观周期打分</span>
-        <span class="pill">多资产回测</span>
+        <span class="pill">宏观周期量化打分</span>
+        <span class="pill">多资产回测框架</span>
     </div>
 
-    <!-- 八、项目核心优势总结 -->
-    <div class="section-title">✨ 项目核心亮点（面试口述素材）</div>
+    <!-- 八、策略核心特征总结 -->
+    <div class="section-title">✨ 策略核心特征</div>
     <div style="background:#e9f1fa;border-radius:20px;padding:24px 28px;">
-        <ul style="font-size:15px;color:#123257;gap:10px;display:flex;flex-wrap:wrap;row-gap:12px;flex-direction:column;">
-            <li>1. 创新融合量化BL模型与主观宏观五周期框架，兼容传统TAA体系，落地性强</li>
-            <li>2. 超额收益来源清晰可拆解，归因完整，每一期权重变动对应宏观事件，逻辑可解释</li>
-            <li>3. 严格尾部风险CVaR优化，最大回撤控制优于行业纯量化多资产策略</li>
-            <li>4. 覆盖全球10类主流可交易ETF，全天候适配复苏/过热/衰退各类宏观环境</li>
-            <li>5. 完整量化代码实现，从数据清洗、建模、优化、回测、归因全流程独立完成</li>
+        <ul style="font-size:15px;color:#123257;display:flex;flex-wrap:wrap;flex-direction:column;gap:12px;">
+            <li>1. 融合BL均衡定价模型与宏观周期量化打分，兼容传统季度TAA量化框架</li>
+            <li>2. 超额收益来源可定量拆解，每期权重调整均对应当期宏观数据信号</li>
+            <li>3. 以CVaR为核心优化目标，组合最大回撤控制优于纯量化季度TAA</li>
+            <li>4. 覆盖全球10类可交易ETF，适配复苏、过热、放缓、收缩全部宏观环境</li>
+            <li>5. 项目覆盖数据清洗、建模优化、回测、归因全量化流程，代码独立实现</li>
         </ul>
     </div>
 
     <!-- 底部页脚 -->
     <div class="footer-text">
-        <span>量化求职作品集 · 宏观增强多资产TAA策略项目</span>
-        <span>回测数据已扣除交易成本 | 完整代码托管Github</span>
+        <span>量化项目作品集 · 宏观多资产TAA策略</span>
+        <span>回测数据已扣除全部交易成本 · 完整项目代码托管于Github</span>
     </div>
 </div>
 </body>
